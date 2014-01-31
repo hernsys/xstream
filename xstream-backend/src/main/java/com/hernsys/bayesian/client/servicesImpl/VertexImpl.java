@@ -14,19 +14,19 @@ public class VertexImpl<T> implements Vertex<T> {
 		this.id = id;
 	}
 
-	@Override
+	//@Override
 	public int getId() {
 		// TODO Auto-generated method stub
 		return id;
 	}
 
-	@Override
+	//@Override
 	public List<Edge> getInEdges() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	//@Override
 	public List<Edge> getOutEdges() {
 		// TODO Auto-generated method stub
 		return null;

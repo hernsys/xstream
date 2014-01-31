@@ -1,7 +1,9 @@
-package com.hernsys.bayesian.client.entryImpl;
+package com.hernsys.bayesian.service.impl;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+
+import javax.enterprise.context.ApplicationScoped;
 
 import org.jboss.errai.bus.server.annotations.Service;
 
@@ -19,19 +21,15 @@ import com.thoughtworks.xstream.XStream;
  * 
  */
 @Service
-//@ApplicationScoped
+@ApplicationScoped
 public class BayesianServiceImpl implements BayesianService {
 
-    private static String pathXmlExample = "/media/horacio/C/java/comunidad-jboss/OTHERS/xstream/xstream-backend/src/main/resources/com/hernsys/xml03/dog-problem.xml03";
-
-    // public static void main(String[] args) {
-    // buildXml03(pathXmlExample);
-    // }
+    private static String pathaXmlExample = "/media/horacio/C/java/comunidad-jboss/OTHERS/xstream/xstream-backend/src/main/java/com/hernsys/bayesian/client/resources/dog-problem.xml03";
 
     @Override
     public BayesNetwork buildXml03(String pathXmlExample) {
         BayesianServiceImpl xmlTrasformer = new BayesianServiceImpl();
-        return new BayesianBuilder().build(xmlTrasformer.xmlToObject(pathXmlExample));
+        return new BayesianBuilder().build(xmlTrasformer.xmlToObject(pathXmlExample);
     }
 
     /* Xml to Object */
@@ -51,4 +49,6 @@ public class BayesianServiceImpl implements BayesianService {
         Bif data = (Bif) xstream.fromXML(reader); // parse
         return data;
     }
+    
+    
 }

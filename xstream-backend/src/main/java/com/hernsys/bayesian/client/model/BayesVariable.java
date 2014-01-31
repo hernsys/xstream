@@ -32,12 +32,13 @@ public class BayesVariable implements Serializable {
         this.outcomes = outcomes;
     }
     
-    public BayesVariable(String name, int id, Object[] outcomes, double[][] probabilities, List<String> incomingNodes) {
+    public BayesVariable(String name, int id, Object[] outcomes, double[][] probabilities, List<String> incomingNodes, double[][] position) {
         this.name = name;
         this.id = id;
         this.probabilities = probabilities;
         this.outcomes = outcomes;
         this.incomingNodes = incomingNodes;
+        this.position = position;
     }
 
     public String getName() {

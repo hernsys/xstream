@@ -8,6 +8,7 @@
   <name>xstream</name>
   <modules>
     <module>xstream-backend</module>
+    <module>xstream-impl</module>
   </modules>
 <repositories>
         <repository>
