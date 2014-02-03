@@ -21,24 +21,23 @@ public class BayesianBuilder {
     }
 
     private BayesVariable buildVariable(Definition def, Network network, int id) {
-        Object[] outcomes = new Object[2];
+        String[] outcomes = new String[2];
         double[][] position = new double[2][2];
         this.getOutcomesByVariable(network, def.getName(), outcomes, position);
         return new BayesVariable(def.getName(), id, outcomes, this.getProbabilities(def.getProbabilities()), def.getGiven(),
                 position);
     }
 
-    private Object[] getOutcomesByVariable(Network network, String nameDedinition, Object[] outcomes, double[][] position) {
-        // Object[] outcomes = new Object[2];
-        int index = 0;
+    private Object[] getOutcomesByVariable(Network network, String nameDefinition, String[] outcomes, double[][] position) {
         for (Variable var : network.getVariables()) {
-            if (var.getName().equals(nameDedinition)) {
+            if (var.getName().equals(nameDefinition)) {
+                int index = 0;
                 for (String outcome : var.getOutComes()) {
                     outcomes[index] = outcome;
+                    index += 1;
                 }
                 // get position
                 position = getPosition(var.getPosition(), position);
-                index += 1;
             }
         }
         return outcomes;

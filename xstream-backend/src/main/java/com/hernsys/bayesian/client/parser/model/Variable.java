@@ -12,42 +12,39 @@ import com.thoughtworks.xstream.annotations.XStreamImplicit;
 @Portable
 public class Variable extends VariableXml implements Serializable {
 
-	@XStreamAlias("NAME")
-	private String name;
+    private static final long serialVersionUID = -4272919361549757485L;
 
-	@XStreamImplicit(itemFieldName = "OUTCOME")
-	private List<String> outComes;
+    @XStreamAlias("NAME")
+    private String name;
 
-	@XStreamAlias("PROPERTY")
-	private String position;
+    @XStreamImplicit(itemFieldName = "OUTCOME")
+    private List<String> outComes;
 
-	
-	
-	
-	public String getName() {
-		return name;
-	}
+    @XStreamAlias("PROPERTY")
+    private String position;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public List<String> getOutComes() {
-		return outComes;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setOutComes(List<String> outComes) {
-		this.outComes = outComes;
-	}
+    public List<String> getOutComes() {
+        return outComes;
+    }
 
-	public String getPosition() {
-		return position;
-	}
+    public void setOutComes(List<String> outComes) {
+        this.outComes = outComes;
+    }
 
-	public void setPosition(String position) {
-		this.position = position;
-	}
+    public String getPosition() {
+        return position;
+    }
 
-	
+    public void setPosition(String position) {
+        this.position = position;
+    }
 
 }

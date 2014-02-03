@@ -9,20 +9,18 @@ import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 @Portable
 public class NetworkXml implements Serializable {
-	
-	private static final long serialVersionUID = -3348355473054506395L;
-	
-    @XStreamImplicit(itemFieldName = "PROBABILITY")
-	private List<Probability> probabilities;
-	
-	
-	
-	public List<Probability> getProbabilities() {
-		return probabilities;
-	}
 
-	public void setProbabilities(List<Probability> probabilities) {
-		this.probabilities = probabilities;
-	}
+    private static final long serialVersionUID = -3348355473054506395L;
+
+    @XStreamImplicit(itemFieldName = "PROBABILITY")
+    private List<Probability> probabilities;
+
+    public List<Probability> getProbabilities() {
+        return probabilities;
+    }
+
+    public void setProbabilities(List<Probability> probabilities) {
+        this.probabilities = probabilities;
+    }
 
 }

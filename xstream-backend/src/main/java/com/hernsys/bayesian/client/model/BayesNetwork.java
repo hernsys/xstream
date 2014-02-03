@@ -6,8 +6,6 @@ import java.util.List;
 
 import org.jboss.errai.common.client.api.annotations.Portable;
 
-import com.hernsys.bayesian.client.services.Vertex;
-
 @Portable
 public class BayesNetwork<T> implements Serializable {
 
@@ -16,7 +14,6 @@ public class BayesNetwork<T> implements Serializable {
     private String name;
     private List<T> nodos;
 
-    
     public BayesNetwork() {
 
     }
@@ -42,6 +39,5 @@ public class BayesNetwork<T> implements Serializable {
     public void setNodos(List<T> nodos) {
         this.nodos = nodos;
     }
-
 
 }

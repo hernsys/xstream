@@ -10,28 +10,29 @@ import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 @Portable
 public class VariableXml implements Serializable {
-	
-	@XStreamImplicit(itemFieldName = "VALUE")
-	private List<String> value;
-	
-	@XStreamAlias("TYPE")
-	private String type;
-	
-	
-	public List<String> getValue() {
-		return value;
-	}
 
-	public void setValue(List<String> value) {
-		this.value = value;
-	}
-	
-	public String getType() {
-		return type;
-	}
+    private static final long serialVersionUID = 6209765372130565034L;
 
-	public void setType(String type) {
-		this.type = type;
-	}
+    @XStreamImplicit(itemFieldName = "VALUE")
+    private List<String> value;
+
+    @XStreamAlias("TYPE")
+    private String type;
+
+    public List<String> getValue() {
+        return value;
+    }
+
+    public void setValue(List<String> value) {
+        this.value = value;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
 }

@@ -12,39 +12,39 @@ import com.thoughtworks.xstream.annotations.XStreamImplicit;
 @Portable
 public class Probability implements Serializable {
 
-	@XStreamAlias("FOR")
-	private String for_;
+    private static final long serialVersionUID = 329348179543890266L;
 
-	@XStreamImplicit(itemFieldName = "GIVEN")
-	private List<String> given;
+    @XStreamAlias("FOR")
+    private String for_;
 
-	@XStreamAlias("TABLE")
-	private String table;
-	
-	
+    @XStreamImplicit(itemFieldName = "GIVEN")
+    private List<String> given;
 
-	public String getFor_() {
-		return for_;
-	}
+    @XStreamAlias("TABLE")
+    private String table;
 
-	public void setFor_(String for_) {
-		this.for_ = for_;
-	}
+    public String getFor_() {
+        return for_;
+    }
 
-	public List<String> getGiven() {
-		return given;
-	}
+    public void setFor_(String for_) {
+        this.for_ = for_;
+    }
 
-	public void setGiven(List<String> given) {
-		this.given = given;
-	}
+    public List<String> getGiven() {
+        return given;
+    }
 
-	public String getTable() {
-		return table;
-	}
+    public void setGiven(List<String> given) {
+        this.given = given;
+    }
 
-	public void setTable(String table) {
-		this.table = table;
-	}
+    public String getTable() {
+        return table;
+    }
+
+    public void setTable(String table) {
+        this.table = table;
+    }
 
 }

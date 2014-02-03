@@ -6,26 +6,21 @@ import org.jboss.errai.common.client.api.annotations.Portable;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
-
 @XStreamAlias("BIF")
 @Portable
 public class Bif implements Serializable {
-	
-	private static final long serialVersionUID = -4817544750207015779L;
-	
+
+    private static final long serialVersionUID = -4817544750207015779L;
+
     @XStreamAlias("NETWORK")
-	private Network network;
+    private Network network;
 
-	public Network getNetwork() {
-		return network;
-	}
+    public Network getNetwork() {
+        return network;
+    }
 
-	public void setNetwork(Network network) {
-		this.network = network;
-	}
-
-	
-
-	
+    public void setNetwork(Network network) {
+        this.network = network;
+    }
 
 }

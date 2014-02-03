@@ -11,28 +11,26 @@ public class BayesVariable implements Serializable {
     private String name;
     private int id;
     double[][] probabilities;
-    private Object[] outcomes;
-    
-    
-    //lo que le agregue
+    private String[] outcomes;
+
     private String type;
     double[][] position;
-    
-    private List<String> incomingNodes;
-    
 
-    public BayesVariable(){
-        
+    private List<String> incomingNodes;
+
+    public BayesVariable() {
+
     }
-    
-    public BayesVariable(String name, int id, Object[] outcomes, double[][] probabilities) {
+
+    public BayesVariable(String name, int id, String[] outcomes, double[][] probabilities) {
         this.name = name;
         this.id = id;
         this.probabilities = probabilities;
         this.outcomes = outcomes;
     }
-    
-    public BayesVariable(String name, int id, Object[] outcomes, double[][] probabilities, List<String> incomingNodes, double[][] position) {
+
+    public BayesVariable(String name, int id, String[] outcomes, double[][] probabilities, List<String> incomingNodes,
+            double[][] position) {
         this.name = name;
         this.id = id;
         this.probabilities = probabilities;
@@ -53,48 +51,48 @@ public class BayesVariable implements Serializable {
         return probabilities;
     }
 
-    public Object[] getOutcomes() {
+    public String[] getOutcomes() {
         return outcomes;
     }
 
-	public List<String> getIncomingNodes() {
-		return incomingNodes;
-	}
+    public List<String> getIncomingNodes() {
+        return incomingNodes;
+    }
 
-	public void setIncomingNodes(List<String> incomingNodes) {
-		this.incomingNodes = incomingNodes;
-	}
+    public void setIncomingNodes(List<String> incomingNodes) {
+        this.incomingNodes = incomingNodes;
+    }
 
-	public String getType() {
-		return type;
-	}
+    public String getType() {
+        return type;
+    }
 
-	public void setType(String type) {
-		this.type = type;
-	}
+    public void setType(String type) {
+        this.type = type;
+    }
 
-	public double[][] getPosition() {
-		return position;
-	}
+    public double[][] getPosition() {
+        return position;
+    }
 
-	public void setPosition(double[][] position) {
-		this.position = position;
-	}
+    public void setPosition(double[][] position) {
+        this.position = position;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setProbabilities(double[][] probabilities) {
-		this.probabilities = probabilities;
-	}
+    public void setProbabilities(double[][] probabilities) {
+        this.probabilities = probabilities;
+    }
 
-	public void setOutcomes(Object[] outcomes) {
-		this.outcomes = outcomes;
-	}
+    public void setOutcomes(String[] outcomes) {
+        this.outcomes = outcomes;
+    }
 
 }

@@ -7,13 +7,13 @@ import com.hernsys.bayesian.client.parser.model.Bif;
 
 /**
  * @author horacio
- *
+ * 
  */
 @Remote
 public interface BayesianService {
-	
-	BayesNetwork buildXml03(String pathXmlExample);
-	
-	Bif xmlToObject(String xmlFileName);
-	
+
+    BayesNetwork buildXml03(String pathXmlExample);
+
+    Bif xmlToObject(String xmlFileName);
+
 }

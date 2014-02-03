@@ -24,12 +24,10 @@ import com.thoughtworks.xstream.XStream;
 @ApplicationScoped
 public class BayesianServiceImpl implements BayesianService {
 
-    private static String pathaXmlExample = "/media/horacio/C/java/comunidad-jboss/OTHERS/xstream/xstream-backend/src/main/java/com/hernsys/bayesian/client/resources/dog-problem.xml03";
-
     @Override
     public BayesNetwork buildXml03(String pathXmlExample) {
         BayesianServiceImpl xmlTrasformer = new BayesianServiceImpl();
-        return new BayesianBuilder().build(xmlTrasformer.xmlToObject(pathXmlExample);
+        return new BayesianBuilder().build(xmlTrasformer.xmlToObject(pathXmlExample));
     }
 
     /* Xml to Object */
@@ -49,6 +47,5 @@ public class BayesianServiceImpl implements BayesianService {
         Bif data = (Bif) xstream.fromXML(reader); // parse
         return data;
     }
-    
-    
+
 }
