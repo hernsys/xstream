@@ -42,28 +42,28 @@
 	<NAME>SerumCalcium</NAME>
 	<OUTCOME>Increased</OUTCOME>
 	<OUTCOME>NotIncreased</OUTCOME>
-	<PROPERTY>position = (126, 221)</PROPERTY>
+	<PROPERTY>position = (106, 271)</PROPERTY>
 </VARIABLE>
 
 <VARIABLE TYPE="nature">
 	<NAME>BrainTumor</NAME>
 	<OUTCOME>Present</OUTCOME>
 	<OUTCOME>Absent</OUTCOME>
-	<PROPERTY>position = (368, 216)</PROPERTY>
+	<PROPERTY>position = (408, 276)</PROPERTY>
 </VARIABLE>
 
 <VARIABLE TYPE="nature">
 	<NAME>Coma</NAME>
 	<OUTCOME>Present</OUTCOME>
 	<OUTCOME>Absent</OUTCOME>
-	<PROPERTY>position = (244, 313)</PROPERTY>
+	<PROPERTY>position = (244, 413)</PROPERTY>
 </VARIABLE>
 
 <VARIABLE TYPE="nature">
 	<NAME>SevereHeadaches</NAME>
 	<OUTCOME>Present</OUTCOME>
 	<OUTCOME>Absent</OUTCOME>
-	<PROPERTY>position = (490, 309)</PROPERTY>
+	<PROPERTY>position = (490, 419)</PROPERTY>
 </VARIABLE>
 
 
