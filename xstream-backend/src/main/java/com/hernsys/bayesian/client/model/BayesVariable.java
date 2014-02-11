@@ -11,7 +11,7 @@ public class BayesVariable implements Serializable {
     private String name;
     private int id;
     double[][] probabilities;
-    private String[] outcomes;
+    private List<String> outcomes;
 
     private String type;
     double[][] position;
@@ -22,14 +22,14 @@ public class BayesVariable implements Serializable {
 
     }
 
-    public BayesVariable(String name, int id, String[] outcomes, double[][] probabilities) {
+    public BayesVariable(String name, int id, List<String> outcomes, double[][] probabilities) {
         this.name = name;
         this.id = id;
         this.probabilities = probabilities;
         this.outcomes = outcomes;
     }
 
-    public BayesVariable(String name, int id, String[] outcomes, double[][] probabilities, List<String> incomingNodes,
+    public BayesVariable(String name, int id, List<String> outcomes, double[][] probabilities, List<String> incomingNodes,
             double[][] position) {
         this.name = name;
         this.id = id;
@@ -49,10 +49,6 @@ public class BayesVariable implements Serializable {
 
     public double[][] getProbabilities() {
         return probabilities;
-    }
-
-    public String[] getOutcomes() {
-        return outcomes;
     }
 
     public List<String> getIncomingNodes() {
@@ -91,8 +87,13 @@ public class BayesVariable implements Serializable {
         this.probabilities = probabilities;
     }
 
-    public void setOutcomes(String[] outcomes) {
+    public List<String> getOutcomes() {
+        return outcomes;
+    }
+
+    public void setOutcomes(List<String> outcomes) {
         this.outcomes = outcomes;
     }
+
 
 }
