@@ -1,5 +1,6 @@
 package com.hernsys.bayesian.service.impl;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
@@ -26,8 +27,8 @@ public class BayesianServiceImpl implements BayesianService {
 
     @Override
     public BayesNetwork buildXml03(String pathXmlExample) {
-        BayesianServiceImpl xmlTrasformer = new BayesianServiceImpl();
-        return new BayesianBuilder().build(xmlTrasformer.xmlToObject(pathXmlExample));
+        String pathFile = this.getAbsolutePath() + pathXmlExample;
+        return new BayesianBuilder().build(xmlToObject(pathFile));
     }
 
     /* Xml to Object */
@@ -46,6 +47,10 @@ public class BayesianServiceImpl implements BayesianService {
         xstream.processAnnotations(Definition.class);
         Bif data = (Bif) xstream.fromXML(reader); // parse
         return data;
+    }
+
+    private String getAbsolutePath() {
+        return new File("").getAbsolutePath();
     }
 
 }
